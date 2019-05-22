@@ -1,0 +1,62 @@
+-
+  var pages =[
+    {
+      pageName: 'Top',
+      pageDir: '/'
+    },
+    {
+      pageName: 'About',
+      pageDir: 'about'
+    },
+    {
+      pageName: 'Blog',
+      pageUrl: 'https://game-web-design.hatenadiary.com/'
+    },
+    {
+      pageName: 'Twitter',
+      pageUrl: 'https://twitter.com/NoobWebDesigner'
+    },
+    {
+      pageName: 'Contact',
+      pageUrl: 'mailto:326.fujimaki@gmail.com'
+    }
+  ]
+
+doctype html
+html(amp='', lang='ja')
+  head
+    meta(charset="utf-8")
+    title Mitsuru Fujimaki’s Portfolio
+    meta(name='description', content='Mitsuru Fujimaki’s Portfolio')
+    meta(name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, shrink-to-fit=yes")
+    meta(name='referrer', content='unsafe-url')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='format-detection', content='email=no,telephone=no,address=no')
+    meta(property='og:site_name', content='Mitsuru Fujimaki’s Portfolio')
+    meta(property='og:title', content='Mitsuru Fujimaki’s Portfolio')
+    meta(property='og:description', content='Mitsuru Fujimaki’s Portfolio')
+    meta(property='og:url', content='https://fujimaki.design/')
+    meta(property='og:image', content='https://fujimaki.design/ogp.jpg')
+    meta(property='og:type', content='website')
+    link(rel='canonical', href='正規化するURL')
+    link(rel='stylesheet', href='css/style.css')
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500|Noto+Serif+JP:300,400,500|Oswald:300,400|Rubik:300,400,500&subset=japanese")
+    link(rel="stylesheet", href="https://use.typekit.net/zgt5zkk.css")
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.2.0/dist/css/yakuhanjp-narrow.min.css")
+    link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous")
+
+  body
+    header
+      h1
+        a(href="/")
+        | Fujimaki Mitsuru
+      nav
+        ul
+          - for (var x = 0; x < pages.length; x++)
+            if pages[x]['pageDir']
+              li: a(href='/'+pages[x]['pageDir']+'/') #{pages[x]['pageName']}
+            if pages[x]['pageUrl']
+              li: a(href=pages[x]['pageUrl'],target="_blank") #{pages[x]['pageName']}
+
+    i.fas.fa-bars
+    script(src="js/app.js" defer)

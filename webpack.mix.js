@@ -9,7 +9,7 @@ mix.js('src/js/app.js', 'public/js/app.js')
         "popper.js": ['Popper', 'window.Popper', 'popper', 'window.popper'],
         "jquery": ['$', 'window.jQuery']
     })
-glob.sync('src/sass/**/*.scss').map(function (file) {
+glob.sync('src/sass/**/*.sass').map(function (file) {
     if (file.match("/_")) return;
     mix.sass(file, 'public/css/')
         .options({
