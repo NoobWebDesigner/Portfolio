@@ -1,0 +1,41 @@
+extends lib/_layout.pug
+
+block canonical
+  link(rel="canonical" href="https://pug-test.com/index.html")
+
+block title
+  title PUGテスト
+
+block pageTtl
+  h1 PUGテスト
+
+block leadTxt
+  p PUGを使ったHTMページ作成のテストです
+
+block mainVisual
+  .mainVisual
+    img(src="https://placehold.jp/1280x640.png", alt="メインビジュアル")
+
+block container
+  main
+    article.info
+      h2 Information
+      section
+        h3 PUGのテスト
+        p あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+      section
+        h3 PUGのテスト
+        p あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+      section
+        h3 PUGのテスト
+        p あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+    ul.banner
+      li
+        a(href="")
+          img(src="https://placehold.jp/286x86.png", alt="バナーが入ります")
+      li
+        a(href="")
+          img(src="https://placehold.jp/286x86.png", alt="バナーが入ります")
+      li
+        a(href="")
+          img(src="https://placehold.jp/286x86.png", alt="バナーが入ります")
