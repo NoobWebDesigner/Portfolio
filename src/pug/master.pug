@@ -1,8 +1,8 @@
 -
   var pages =[
     {
-      pageName: 'Top',
-      pageDir: '/'
+      pageName: 'Works',
+      pageDir: 'works'
     },
     {
       pageName: 'About',
@@ -21,20 +21,28 @@
       pageUrl: 'mailto:326.fujimaki@gmail.com'
     }
   ]
+mixin gNav
+  li: a(href="/") Top
+  - for (var x = 0; x < pages.length; x++)
+    if pages[x]['pageDir']
+      li: a(href='/'+pages[x]['pageDir']+'/') #{pages[x]['pageName']}
+    if pages[x]['pageUrl']
+      li: a(href=pages[x]['pageUrl'],target="_blank") #{pages[x]['pageName']}
+
 
 doctype html
 html(amp='', lang='ja')
   head
     meta(charset="utf-8")
-    title Mitsuru Fujimaki’s Portfolio
-    meta(name='description', content='Mitsuru Fujimaki’s Portfolio')
+    title 326.Fujimaki - Web Designer / Coder
+    meta(name='description', content='326.Fujimaki - Web Designer / Coder')
     meta(name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, shrink-to-fit=yes")
     meta(name='referrer', content='unsafe-url')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='format-detection', content='email=no,telephone=no,address=no')
-    meta(property='og:site_name', content='Mitsuru Fujimaki’s Portfolio')
-    meta(property='og:title', content='Mitsuru Fujimaki’s Portfolio')
-    meta(property='og:description', content='Mitsuru Fujimaki’s Portfolio')
+    meta(property='og:site_name', content='326.Fujimaki - Web Designer / Coder')
+    meta(property='og:title', content='326.Fujimaki - Web Designer / Coder')
+    meta(property='og:description', content='326.Fujimaki - Web Designer / Coder')
     meta(property='og:url', content='https://fujimaki.design/')
     meta(property='og:image', content='https://fujimaki.design/ogp.jpg')
     meta(property='og:type', content='website')
@@ -46,17 +54,22 @@ html(amp='', lang='ja')
     link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous")
 
   body
-    header
-      h1
-        a(href="/")
-        | Fujimaki Mitsuru
-      nav
+    header.d-flex.justify-content-between
+      h1.mb-0
+        a(href="/") 326.Fujimaki
+      nav.d-none.d-sm-block
         ul
-          - for (var x = 0; x < pages.length; x++)
-            if pages[x]['pageDir']
-              li: a(href='/'+pages[x]['pageDir']+'/') #{pages[x]['pageName']}
-            if pages[x]['pageUrl']
-              li: a(href=pages[x]['pageUrl'],target="_blank") #{pages[x]['pageName']}
+          +gNav
+      .sp-menu.d-block.d-sm-none
+        i.fas.fa-bars
+          
+        
 
-    i.fas.fa-bars
+    .p-5
+
+    footer.border-top.p-4
+      .container.d-sm-flex.justify-content-between.text-center
+        small ©️ 2019 326.Fujimaki
+        ul.d-none.d-sm-block
+          +gNav
     script(src="js/app.js" defer)
