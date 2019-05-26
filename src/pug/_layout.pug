@@ -1,27 +1,79 @@
+include _mixin
+include _gNav
+block vars
+
 doctype html
-html(amp='', lang='ja')
+html(lang='ja')
   head
+    //- meta基本
     meta(charset="utf-8")
-    title 326.Fujimaki - Web Designer / Coder
-    meta(name='description', content='326.Fujimaki - Web Designer / Coder')
-    meta(name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, shrink-to-fit=yes")
-    meta(name='referrer', content='unsafe-url')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, shrink-to-fit=yes")
     meta(name='format-detection', content='email=no,telephone=no,address=no')
-    meta(property='og:site_name', content='326.Fujimaki - Web Designer / Coder')
-    meta(property='og:title', content='326.Fujimaki - Web Designer / Coder')
-    meta(property='og:description', content='326.Fujimaki - Web Designer / Coder')
-    meta(property='og:url', content='https://fujimaki.design/')
-    meta(property='og:image', content='https://fujimaki.design/ogp.jpg')
-    meta(property='og:type', content='website')
-    link(rel='canonical', href='正規化するURL')
-    link(rel='stylesheet', href='css/style.css')
+
+    //- ページタイトル、ディスクリプションの設定
+    - 
+      var siteURL = "https://fujimaki.design/"
+      var siteName = "326.Fujimaki - Web Designer / Coder"
+      var description = "WEBデザイナー / コーダーの 326.Fujimaki のポートフォリオサイト。WEBデザイナー / コーダーの 326.Fujimaki が制作したページ・バナー・非公開制作物を掲載しています。"
+
+    if pageName == ""
+      - 
+        var title= "326.Fujimaki - Web Designer / Coder"
+        var ogpTitle= siteName
+    else
+      - 
+        var title= pageName + " | 326.Fujimaki - Web Designer / Coder"
+        var ogpTitle= pageName
+        var d_description = pageName + d_description
+
+    if description != ""
+      -
+        var d_description = description
+
+    title #{title}   
+    meta(name="description" content=d_description)
+    
+    if pageName == ""
+      link(rel="canonical" href=siteURL)
+    else
+      link(rel="canonical" href=siteURL + pageUrl + '/')
+    
+
+    //-ogp設定
+    if pageUrl == ""
+      - 
+        var ogpType= "website"
+    else
+      - 
+        var ogpType= "article"
+
+    meta(property="og:title" content=ogpTitle)
+    meta(property="og:type" content=ogpType)
+    meta(property="og:image" content=ogpImage)
+
+    if pageName == ""
+      meta(property="og:url" content=siteURL)
+    else
+      meta(property="og:url" content=siteURL + pageUrl + '/')
+    
+    meta(property="og:description" content=d_description)
+    meta(property="og:site_name" content=siteName)
+    meta(property="og:locale" content="ja") 
+
+    //- 共通CSS
     link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500|Noto+Serif+JP:300,400,500|Oswald:300,400|Rubik:300,400,500&subset=japanese")
     link(rel="stylesheet", href="https://use.typekit.net/zgt5zkk.css")
     link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.2.0/dist/css/yakuhanjp-narrow.min.css")
     link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous")
+    link(rel='stylesheet', href='/css/style.css')
 
-  body
+    //-head引き継ぎ
+    block head
+
+  body(id=pageUrl)
+
+    //- header
     header#header.d-flex.justify-content-between.position-fixed.w-100
       h1.mb-0
         a(href="/") 326.Fujimaki
@@ -31,8 +83,13 @@ html(amp='', lang='ja')
       #sp-menu.d-block.d-sm-none
         i.fas.fa-f.fa-bars
     #sticky
-          
-        
-    .p-5
 
-    .w-50
+    block body
+
+    //- footer
+    footer.border-top.p-4
+      .container.d-sm-flex.justify-content-between.text-center
+        small ©️ 2019 326.Fujimaki
+        ul.d-none.d-sm-block
+          +gNav
+    script(src="/js/app.js" defer)
