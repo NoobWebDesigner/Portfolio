@@ -1,0 +1,30 @@
+-
+  var pages =[
+    {
+      pageName: 'Works',
+      pageDir: 'works'
+    },
+    {
+      pageName: 'About',
+      pageDir: 'about'
+    },
+    {
+      pageName: 'Blog',
+      pageUrl: 'https://game-web-design.hatenadiary.com/'
+    },
+    {
+      pageName: 'Twitter',
+      pageUrl: 'https://twitter.com/NoobWebDesigner'
+    },
+    {
+      pageName: 'Contact',
+      pageUrl: 'mailto:326.fujimaki@gmail.com'
+    }
+  ]
+mixin gNav
+  li: a(href="/") Top
+  - for (var x = 0; x < pages.length; x++)
+    if pages[x]['pageDir']
+      li: a(href='/'+pages[x]['pageDir']+'/') #{pages[x]['pageName']}
+    if pages[x]['pageUrl']
+      li: a(href=pages[x]['pageUrl'],target="_blank") #{pages[x]['pageName']}

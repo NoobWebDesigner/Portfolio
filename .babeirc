@@ -1,0 +1,10 @@
+{
+  "presets": [
+    ["env", {
+          loose: true,
+          modules: false,
+          targets: ">0.25% in JP, not ie <= 10"
+        }
+    }]
+  ]
+}

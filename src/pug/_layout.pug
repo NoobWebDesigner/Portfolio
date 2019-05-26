@@ -1,17 +1,12 @@
-include _mixin
-include _gNav
-block ovars
-block vars
-
 doctype html
-html(lang='ja')
+html(amp='', lang='ja')
   head
     meta(charset="utf-8")
-    meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    meta(name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, shrink-to-fit=yes")
     title 326.Fujimaki - Web Designer / Coder
     meta(name='description', content='326.Fujimaki - Web Designer / Coder')
-
+    meta(name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, shrink-to-fit=yes")
+    meta(name='referrer', content='unsafe-url')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='format-detection', content='email=no,telephone=no,address=no')
     meta(property='og:site_name', content='326.Fujimaki - Web Designer / Coder')
     meta(property='og:title', content='326.Fujimaki - Web Designer / Coder')
@@ -41,12 +36,3 @@ html(lang='ja')
     .p-5
 
     .w-50
-      .
-        <canvas id="myChart" width="400" height="400"></canvas>
-
-    footer.border-top.p-4
-      .container.d-sm-flex.justify-content-between.text-center
-        small ©️ 2019 326.Fujimaki
-        ul.d-none.d-sm-block
-          +gNav
-    script(src="js/app.js" defer)
