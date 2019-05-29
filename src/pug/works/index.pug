@@ -1,0 +1,17 @@
+extends ../lib/_layout
+
+block vars
+  -
+    var pageName = "Works"
+    var description = ""
+    var pageUrl = "works"
+    var pageID = "works"
+
+block body
+  section.works.mt-5.mb-5
+      h2.h1.text-center.mb-5 Works
+      .container
+        .row
+          include ../lib/_works_list
+          +works_list_page
+          

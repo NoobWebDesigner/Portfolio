@@ -1,11 +1,26 @@
-extends _layout
+extends lib/_layout
+
 
 block vars
   -
     var pageName = ""
     var description = ""
     var pageUrl = ""
-    var rootPath = ""
+    var pageID = "index"
 
 block body
-  p test indexでした。
+  main
+    section.main.text-center.d-flex.justify-content-center.align-items-center.position-relative.mb-5
+      div
+        h2.main-ttl 326.Fujimaki
+        p.main-p.text-muted WEB DESIGNER / CODER
+      div.main-down
+        i.fa.fa-caret-square-down
+    section.works.mb-5
+      h3.h1.text-center.mb-5 Works
+      .container
+        .row
+          include lib/_works_list
+          +works_list
+
+

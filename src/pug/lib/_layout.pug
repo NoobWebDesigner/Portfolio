@@ -1,5 +1,6 @@
 include _mixin
 include _gNav
+
 block vars
 
 doctype html
@@ -71,10 +72,10 @@ html(lang='ja')
     //-head引き継ぎ
     block head
 
-  body(id=pageUrl)
+  body(id=pageID)
 
     //- header
-    header#header.d-flex.justify-content-between.position-fixed.w-100
+    header#header.d-flex.justify-content-between.fixed-top.w-100
       h1.mb-0
         a(href="/") 326.Fujimaki
       nav#gNav
@@ -93,3 +94,4 @@ html(lang='ja')
         ul.d-none.d-sm-block
           +gNav
     script(src="/js/app.js" defer)
+    block footer

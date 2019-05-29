@@ -1,0 +1,55 @@
+-
+  var list =[
+    {
+      worksLink: '',
+      worksImg: 'https://placehold.jp/380x268.png',
+      worksTtl: 'ポートフォリオ',
+      worksTxt: 'コーディング'
+    },
+    {
+      worksLink: '',
+      worksImg: 'https://placehold.jp/380x268.png',
+      worksTtl: 'ポートフォリオ',
+      worksTxt: 'コーディング'
+    },
+    {
+      worksLink: '',
+      worksImg: 'https://placehold.jp/380x268.png',
+      worksTtl: 'ポートフォリオ',
+      worksTxt: 'コーディング'
+    },
+    {
+      worksLink: '',
+      worksImg: 'https://placehold.jp/380x268.png',
+      worksTtl: 'ポートフォリオ',
+      worksTxt: 'コーディング'
+    },
+    {
+      worksLink: '',
+      worksImg: 'https://placehold.jp/380x268.png',
+      worksTtl: 'ポートフォリオ',
+      worksTxt: 'コーディング'
+    },
+    {
+      worksLink: '',
+      worksImg: 'https://placehold.jp/380x268.png',
+      worksTtl: 'ポートフォリオ',
+      worksTxt: 'コーディング'
+    }
+  ]
+
+mixin works_list
+  each item in list
+    a.col-md-4.col-6(href=item.worksLink)
+      p.works-catch.mb-2
+        img.img-fluid(src=item.worksImg)
+      h4.works-ttl.h6.mb-1 #{item.worksTtl}
+      p.works-txt #{item.worksTxt}
+
+mixin works_list_page
+  each item in list
+    a.col-6(href=item.worksLink)
+      p.works-catch.mb-2
+        img.img-fluid(src=item.worksImg)
+      h4.works-ttl.h6.mb-1 #{item.worksTtl}
+      p.works-txt #{item.worksTxt}
