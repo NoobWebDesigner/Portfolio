@@ -4,12 +4,16 @@ body
   background: #fff
   color: #333;
   overflow-x: hidden
+  letter-spacing: .01em
 a
   color: #333
   text-decoration: none
   &:hover,&:active
     color: #333
     text-decoration: none
+
+.container
+  width: $container-width
 
 header
   padding: 1.25rem 1rem;
@@ -24,6 +28,7 @@ header
     @include flex-text-center
     a
       color: #fff
+      transition: all .15s ease
       &:hover,&:active
         color: theme-color("primary")
   #gNav
@@ -46,6 +51,7 @@ header
           display: block
           width: 100%;
           padding: .625rem 1rem
+          transition: all .15s ease
           &:hover,&:active
             color: theme-color("primary")
           &::before

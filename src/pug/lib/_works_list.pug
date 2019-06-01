@@ -40,9 +40,9 @@
 
 mixin works_list
   each item in list
-    a.col-md-4.col-6(href=item.worksLink)
+    a.col-md-4.col-sm-6.mb-sm-0.mb-3(href=item.worksLink)
       p.works-catch.mb-2
-        img.img-fluid(src=item.worksImg)
+        img.img-fluid.w-100(src=item.worksImg)
       h4.works-ttl.h6.mb-1 #{item.worksTtl}
       p.works-txt #{item.worksTxt}
 
@@ -50,6 +50,6 @@ mixin works_list_page
   each item in list
     a.col-6(href=item.worksLink)
       p.works-catch.mb-2
-        img.img-fluid(src=item.worksImg)
+        img.img-fluid.w-100(src=item.worksImg)
       h4.works-ttl.h6.mb-1 #{item.worksTtl}
       p.works-txt #{item.worksTxt}
