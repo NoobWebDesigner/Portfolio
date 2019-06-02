@@ -59,7 +59,7 @@ window.onresize = function () {
 }
 
 //chart
-var ctx = document.getElementById("myChart").getContext('2d');
+var ctx = document.getElementById("myChart");
 var myChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
@@ -73,5 +73,8 @@ var myChart = new Chart(ctx, {
     }]
   },
   options: {
+    tooltips: {
+      enabled: false
+    }
   }
 });
