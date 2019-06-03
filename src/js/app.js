@@ -75,7 +75,8 @@ const chartFunc = (id, blue, gray) => {
     options: {
       tooltips: {
         enabled: false
-      }
+      },
+      cutoutPercentage: 75
     }
   });
 }
