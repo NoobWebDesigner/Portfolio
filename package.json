@@ -27,7 +27,6 @@
         "css-mqpacker": "^7.0.0",
         "glob": "^7.1.3",
         "imagemin": "6.0.0",
-        "jquery": "^3.3.1",
         "laravel-mix-pug-recursive": "^0.3.3-mikemartin",
         "popper.js": "1.14.7",
         "vue": "^2.6.10"

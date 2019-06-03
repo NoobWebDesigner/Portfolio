@@ -5,10 +5,10 @@ mix.pug = require('laravel-mix-pug-recursive');
 mix.setResourceRoot('');
 
 mix.js('src/js/app.js', 'public/js/app.js')
-  .autoload({
-    "popper.js": ['Popper', 'window.Popper', 'popper', 'window.popper'],
-    "jquery": ['$', 'window.jQuery']
-  })
+  .extract([
+    'chart.js',
+  ])
+  .sourceMaps(false);
 
 glob.sync('src/sass/**/*.sass').map(function (file) {
   if (file.match("/_")) return;

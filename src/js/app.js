@@ -59,22 +59,29 @@ window.onresize = function () {
 }
 
 //chart
-var ctx = document.getElementById("myChart");
-var myChart = new Chart(ctx, {
-  type: 'doughnut',
-  data: {
-    datasets: [{
-      data: [9, 1],
-      backgroundColor: [
-        'rgba(82, 202, 255, 1)',
-        'rgba(206, 206, 206, 1)'
-      ],
-      borderWidth: 0
-    }]
-  },
-  options: {
-    tooltips: {
-      enabled: false
+const chartFunc = (id, blue, gray) => {
+  const chartjs = new Chart(id, {
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        data: [blue, gray],
+        backgroundColor: [
+          'rgba(82, 202, 255, 1)',
+          'rgba(206, 206, 206, 1)'
+        ],
+        borderWidth: 0
+      }]
+    },
+    options: {
+      tooltips: {
+        enabled: false
+      }
     }
-  }
-});
+  });
+}
+const ctx = document.getElementsByClassName("per-90");
+chartFunc(ctx, 9, 1);
+const ctx2 = document.getElementsByClassName("per-80");
+chartFunc(ctx2, 8, 2);
+const ctx3 = document.getElementsByClassName("per-70");
+chartFunc(ctx3, 7, 3);
