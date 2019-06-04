@@ -1,8 +1,6 @@
 {
-    "/public/js/vendor.js": "/public/js/vendor.js",
     "/public/js/app.js": "/public/js/app.js",
     "/public/css/style.css": "/public/css/style.css",
-    "/public/js/manifest.js": "/public/js/manifest.js",
     "/public/about/index.html": "/public/about/index.html",
     "/public/index.html": "/public/index.html",
     "/public/works/index.html": "/public/works/index.html"

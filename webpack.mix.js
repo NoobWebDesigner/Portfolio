@@ -5,9 +5,6 @@ mix.pug = require('laravel-mix-pug-recursive');
 mix.setResourceRoot('');
 
 mix.js('src/js/app.js', 'public/js/app.js')
-  .extract([
-    'chart.js',
-  ])
   .sourceMaps(false);
 
 glob.sync('src/sass/**/*.sass').map(function (file) {

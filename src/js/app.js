@@ -1,5 +1,3 @@
-var Chart = require('chart.js');
-
 //toggleClass
 const toggleClass = function (node, className) {
   let classNames = className.trim().split(/\s+/),
@@ -76,7 +74,16 @@ const chartFunc = (id, blue, gray) => {
       tooltips: {
         enabled: false
       },
-      cutoutPercentage: 75
+      hover: {
+        mode: null
+      },
+      cutoutPercentage: 75,
+      plugins: {
+        deferred: {
+          yOffset: '80%', // defer until 50% of the canvas height are inside the viewport
+          delay: 200      // delay of 500 ms after the canvas is considered inside the viewport
+        }
+      }
     }
   });
 }
