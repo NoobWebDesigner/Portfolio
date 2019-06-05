@@ -28,19 +28,9 @@ glob.sync('src/sass/**/*.sass').map(function (file) {
 });
 glob.sync('src/**/*.pug').map(function (file) {
   if (file.match("/_")) return;
-  if (!mix.inProduction()) {
-    mix.pug(file, 'public', {
-      excludePath: 'src/pug',
-      pug: {
-        pretty: true,
-        debug: true
-      }
-    })
-  } else {
-    mix.pug(file, 'public', {
-      excludePath: 'src/pug'
-    })
-  }
+  mix.pug(file, 'public', {
+    excludePath: 'src/pug'
+  })
 });
 
 mix.browserSync({

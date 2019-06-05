@@ -11,7 +11,36 @@ block body
   section.works.mt-5.mb-5
       h2.h1.text-center.mb-5 Works
       .container
-        .row
-          include ../lib/_works_list
-          +works_list_page
+        article#works-01
+          p.visual
+            img.img-fluid.w-100(src="https://placehold.jp/960x500.png" data-emergence="hidden")
+          p.text-right.caption(data-emergence="hidden") ※掲載の画像は2019年5月現在のWEBページをキャプチャーしたもので、現在と様子が異なる場合がございます。
+          h3.h2(data-emergence="hidden") テストテストテスト
+            a.exLink.h4(href="https://test.com" target="_blank")
+              i.fas.fa-external-link-alt
+          ul(data-emergence="hidden")
+            li 担当範囲：
+              ul
+                li コーディング（アニメーション以外）
+                li  デザイン（ポップアップページのみ）
+            li 制作期間：
+              ul
+                li 2日（16時間）
+            li 使用した技術：
+              ul
+                li  HTML5
+                li  CSS3
+                li  Sass
+                li  jQuery
+                li  Laravel-Mix（Webpack）
+                li  Git
+                li  Photoshop
+                li  Illustrator
+          p(data-emergence="hidden") デザイナーが制作したデザインデータを元に、コーディングを行なったWEBサイト。
+            br
+            | どのディスプレイから見ても綺麗かつ軽量なページを目指してコーディングしました。
+            br
+            | 文字やロゴには積極的にSVGを採用し、その他の画像はできる限りSuper Retinaに対応させた。
+            br
+            | リクエスト数を減らすためにCSSをモバイルファーストコーディング。Sassコンパイル時にcss-mqpackerとcss-declaration-sorterを使用し、CSSをさらに最適化。JSもWebpackを使用しバンドル化し、ページ読込時の負担を軽減している。
           

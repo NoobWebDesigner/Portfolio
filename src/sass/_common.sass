@@ -66,7 +66,6 @@ header
       height: auto
       background: none
       ul
-        font-size: 0
         li
           display: inline-block
           font-size: 1.25rem
@@ -86,6 +85,9 @@ header
     text-align: center
     line-height: 1
     cursor: pointer
+
+.caption
+  font-size: .625rem
 
 
   
@@ -112,3 +114,28 @@ footer
         color: #333
         text-decoration: none
         opacity: .7
+
+#pagetop
+  visibility: hidden
+  position: fixed
+  bottom: 1.875rem
+  right: 1.875rem
+  cursor: pointer
+  opacity: 0
+  transition:  all 0.3s ease
+  &.show
+    visibility: visible
+    opacity: .2
+  &:hover
+    opacity: .5
+  i
+    font-size: 2.5rem
+
+[data-emergence=hidden]
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s,visibility .5s;
+[data-emergence=visible]
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .5s,visibility .5s;

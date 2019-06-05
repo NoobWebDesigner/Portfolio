@@ -1,7 +1,7 @@
 -
   var list =[
     {
-      worksLink: '',
+      worksLink: '/works/#works-01',
       worksImg: 'https://placehold.jp/380x268.png',
       worksTtl: 'ポートフォリオ',
       worksTxt: 'コーディング'
@@ -40,7 +40,7 @@
 
 mixin works_list
   each item in list
-    a.col-md-4.col-sm-6.mb-sm-0.mb-3(href=item.worksLink)
+    a.col-md-4.col-sm-6.mb-sm-0.mb-3(href=item.worksLink data-emergence="hidden")
       p.works-catch.mb-2
         img.img-fluid.w-100(src=item.worksImg)
       h4.works-ttl.h6.mb-1 #{item.worksTtl}

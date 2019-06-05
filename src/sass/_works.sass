@@ -3,4 +3,17 @@
     &-txt
       font-size: .75rem
       color: $text-muted
+    article
+      &::before
+        height: 6.25rem
+        margin: -6.25rem 0 0;
+        content: ''
+        display: block
+      a
+        vertical-align: middle
+        display: inline-block
+        margin-left: .625rem
+        color: theme-color("primary")
+        &:hover
+          color: lighten(theme-color("primary"), 20% );
       

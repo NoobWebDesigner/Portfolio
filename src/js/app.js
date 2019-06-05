@@ -1,3 +1,5 @@
+import emergence from 'emergence.js';
+
 //toggleClass
 const toggleClass = function (node, className) {
   let classNames = className.trim().split(/\s+/),
@@ -57,39 +59,67 @@ window.onresize = function () {
 }
 
 //chart
-const chartFunc = (id, blue, gray) => {
-  const chartjs = new Chart(id, {
-    type: 'doughnut',
-    data: {
-      datasets: [{
-        data: [blue, gray],
-        backgroundColor: [
-          'rgba(82, 202, 255, 1)',
-          'rgba(206, 206, 206, 1)'
-        ],
-        borderWidth: 0
-      }]
-    },
-    options: {
-      tooltips: {
-        enabled: false
+if (document.getElementById('about')) {
+  const chartFunc = (id, blue, gray) => {
+    const chartjs = new Chart(id, {
+      type: 'doughnut',
+      data: {
+        datasets: [{
+          data: [blue, gray],
+          backgroundColor: [
+            'rgba(82, 202, 255, 1)',
+            'rgba(206, 206, 206, 1)'
+          ],
+          borderWidth: 0
+        }]
       },
-      hover: {
-        mode: null
-      },
-      cutoutPercentage: 75,
-      plugins: {
-        deferred: {
-          yOffset: '80%', // defer until 50% of the canvas height are inside the viewport
-          delay: 200      // delay of 500 ms after the canvas is considered inside the viewport
+      options: {
+        tooltips: {
+          enabled: false
+        },
+        hover: {
+          mode: null
+        },
+        cutoutPercentage: 75,
+        plugins: {
+          deferred: {
+            yOffset: '80%',
+            delay: 200
+          }
         }
       }
-    }
-  });
+    });
+  }
+  const ctx = document.getElementsByClassName("per-90");
+  chartFunc(ctx, 9, 1);
+  const ctx2 = document.getElementsByClassName("per-80");
+  chartFunc(ctx2, 8, 2);
+  const ctx3 = document.getElementsByClassName("per-70");
+  chartFunc(ctx3, 7, 3);
 }
-const ctx = document.getElementsByClassName("per-90");
-chartFunc(ctx, 9, 1);
-const ctx2 = document.getElementsByClassName("per-80");
-chartFunc(ctx2, 8, 2);
-const ctx3 = document.getElementsByClassName("per-70");
-chartFunc(ctx3, 7, 3);
+
+// pagetop
+const pageTopBtn = document.getElementById('pagetop');
+pageTopBtn.addEventListener("click", function foo() {
+  const nowY = window.pageYOffset;
+  window.scrollTo(0, Math.floor(nowY * 0.8));
+  if (nowY > 0) {
+    window.setTimeout(foo, 10);
+  }
+});
+
+// pagetop をスクロールしてから表示
+window.addEventListener('scroll', () => {
+  //高さを取得して表示
+  let scrollTop = document.scrollingElement.scrollTop;
+  if (scrollTop > 100) {
+    document.getElementById('pagetop').classList.add('show');
+  } else if (scrollTop < 100) {
+    document.getElementById('pagetop').classList.remove('show');
+  }
+}, false);
+
+//emergence
+emergence.init({
+  offsetTop: 100
+});
