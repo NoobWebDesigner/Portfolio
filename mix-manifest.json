@@ -3,5 +3,6 @@
     "/public/css/style.css": "/public/css/style.css",
     "/public/about/index.html": "/public/about/index.html",
     "/public/index.html": "/public/index.html",
+    "/public/private/index.html": "/public/private/index.html",
     "/public/works/index.html": "/public/works/index.html"
 }

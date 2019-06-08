@@ -4,16 +4,33 @@
       font-size: .75rem
       color: $text-muted
     article
+      margin-bottom: 9.375rem
       &::before
         height: 6.25rem
         margin: -6.25rem 0 0;
         content: ''
         display: block
       a
-        vertical-align: middle
-        display: inline-block
-        margin-left: .625rem
         color: theme-color("primary")
         &:hover
-          color: lighten(theme-color("primary"), 20% );
-      
+          color: lighten(theme-color("primary"), 20% )
+      h3
+        a
+          vertical-align: middle
+          display: inline-block
+          margin-left: .625rem 
+      .data
+        font-size: .75rem
+        th
+          width: 10em
+          vertical-align: top
+        ul
+          list-style: none
+          display: inline-block
+          margin: 0
+          padding: 0
+          li
+            display: inline-block
+            &:not(:first-child)::before
+              content: '/'
+              margin: auto .5em

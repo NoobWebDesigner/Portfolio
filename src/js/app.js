@@ -121,5 +121,6 @@ window.addEventListener('scroll', () => {
 
 //emergence
 emergence.init({
-  offsetTop: 100
+  offsetTop: 100,
+  offsetBottom: 100
 });
