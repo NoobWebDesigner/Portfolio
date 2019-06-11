@@ -1,5 +1,10 @@
 #works
   .works
+    a
+      color: theme-color("primary")
+      text-decoration: underline;
+      &:hover
+        color: lighten(theme-color("primary"), 20% )
     &-txt
       font-size: .75rem
       color: $text-muted
@@ -10,15 +15,12 @@
         margin: -6.25rem 0 0;
         content: ''
         display: block
-      a
-        color: theme-color("primary")
-        &:hover
-          color: lighten(theme-color("primary"), 20% )
       h3
         a
           vertical-align: middle
           display: inline-block
           margin-left: .625rem 
+          text-decoration: none;
       .data
         font-size: .75rem
         th
