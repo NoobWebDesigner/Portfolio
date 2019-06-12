@@ -1,52 +1,34 @@
 -
   var list =[
     {
-      worksLink: '/works/#works-01',
-      worksImg: 'https://placehold.jp/380x268.png',
-      worksTtl: 'ポートフォリオ',
+      worksLink: '/works/#fujimaki',
+      worksImg: '/images/top/img_fujimaki',
+      worksTtl: 'ポートフォリオサイト 2019',
+      worksTxt: 'デザイン / コーディング'
+    },
+    {
+      worksLink: '/works/#akarimirai',
+      worksImg: '/images/top/img_akarimirai',
+      worksTtl: '大阪夢まつり公式アイドル｜アカリみらいオフィシャルサイト',
       worksTxt: 'コーディング'
     },
     {
-      worksLink: '',
-      worksImg: 'https://placehold.jp/380x268.png',
-      worksTtl: 'ポートフォリオ',
-      worksTxt: 'コーディング'
-    },
-    {
-      worksLink: '',
-      worksImg: 'https://placehold.jp/380x268.png',
-      worksTtl: 'ポートフォリオ',
-      worksTxt: 'コーディング'
-    },
-    {
-      worksLink: '',
-      worksImg: 'https://placehold.jp/380x268.png',
-      worksTtl: 'ポートフォリオ',
-      worksTxt: 'コーディング'
-    },
-    {
-      worksLink: '',
-      worksImg: 'https://placehold.jp/380x268.png',
-      worksTtl: 'ポートフォリオ',
-      worksTxt: 'コーディング'
-    },
-    {
-      worksLink: '',
-      worksImg: 'https://placehold.jp/380x268.png',
-      worksTtl: 'ポートフォリオ',
-      worksTxt: 'コーディング'
+      worksLink: '/works/#zinossoft',
+      worksImg: '/images/top/img_zinossoft',
+      worksTtl: '株式会社 Zinossoft',
+      worksTxt: 'ディレクション / デザイン / コーディング '
     }
   ]
 
 mixin works_list
   each item in list
     a.col-md-4.col-sm-6.mb-sm-0.mb-3(href=item.worksLink data-emergence="hidden")
-      p.works-catch.mb-2
-        img.img-fluid.w-100(src=item.worksImg alt=item.worksTtl)
+      p.works-catch.mb-2.border
+        img.img-fluid.w-100(src=item.worksImg+'.png' srcset=srcset3x(item.worksImg,'.png') alt=item.worksTtl)
       h4.works-ttl.h6.mb-1 #{item.worksTtl}
       p.works-txt #{item.worksTxt}
 
-mixin works_list_page
+//- mixin works_list_page
   each item in list
     a.col-6(href=item.worksLink)
       p.works-catch.mb-2

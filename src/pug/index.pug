@@ -10,36 +10,37 @@ block vars
 
 block body
   main
-    section.main.text-center.d-flex.justify-content-center.align-items-center.position-relative.mb-5
-      div
-        h2.main-ttl 326.Fujimaki
-        p.main-p.text-muted.m-0 WEB DESIGNER / CODER
-      div.main-down
-        i.fa.fa-caret-square-down
-    section.works.mb-5
-      h3.h1.text-center.mb-5(data-emergence="hidden") Works
-      .container
-        .row
-          include lib/_works_list
-          +works_list
-    section.about.mb-5
-      h3.h1.text-center.mb-5(data-emergence="hidden") About
-      .container
-        .row.d-flex
-          .col-md-7.order-2.order-sm-1(data-emergence="hidden")
-            h4.mb-0 フジマキミツル
-            p.mb-3 Webデザイナー／コーダー
-            p.mb-4.text-justify SEOに最適化されたコーディングを得意としています。
-              br
-              | 4年間、Webデザイナーアシスタントとして、HTML編集・コンテンツ追加・バナー制作に従事してきました。
-              br
-              | コーディングが得意なので、フロントエンドについて勉強中です。
-            p
-              a.col-md-6.btn.btn-outline-dark(href="/about/") 詳しくはこちら&nbsp;&nbsp;
-                i.fas.fa-angle-right
-          .col-md-5.order-1.order-sm-2(data-emergence="hidden")
-            p
-              img.img-fluid.w-100(src="https://placehold.jp/500x500.png" alt="")
+    section
+      .main.text-center.d-flex.justify-content-center.align-items-center.position-relative.mb-5
+        div
+          h2.main-ttl 326.Fujimaki
+          p.main-p.text-muted.m-0 WEB DESIGNER / CODER
+        div.main-down
+          i.fa.fa-caret-square-down
+      section.works.mb-5
+        h3.h1.text-center.mb-5(data-emergence="hidden") Works
+        .container
+          .row
+            include lib/_works_list
+            +works_list
+      section.about.mb-5
+        h3.h1.text-center.mb-5(data-emergence="hidden") About
+        .container
+          .row.d-flex
+            .col-md-7.order-2.order-sm-1(data-emergence="hidden")
+              h4.mb-0 326.Fujimaki
+              p.mb-3 Webデザイナー／コーダー
+              p.mb-4.text-justify SEOに最適化されたコーディングを得意としています。
+                br
+                | 4年間、Webデザイナーアシスタントとして、コーディング ・ ページデザイン ・ バナー作成 ・ HTMLメールなどを制作してきました。
+                br
+                | コーディングが得意なので、フロントエンドについて勉強中です。
+              p
+                a.col-md-6.btn.btn-outline-dark(href="/about/") 詳しくはこちら&nbsp;&nbsp;
+                  i.fas.fa-angle-right
+            .col-md-5.order-1.order-sm-2(data-emergence="hidden")
+              p
+                img.img-fluid.w-100(src="https://placehold.jp/500x500.png" alt="")
 
 
 
