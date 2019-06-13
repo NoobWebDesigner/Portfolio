@@ -41,15 +41,19 @@
     &-txt
       font-size: .75rem
       color: $text-muted
-    .works-catch
-      overflow: hidden
+    a
+      text-decoration: none;
+      transition: all .15s ease-in-out
+      @media(prefers-reduced-motion:reduce)
+        transform: none 
       img
-        transform: scale(1)
-        transition: .3s ease-in-out
-    a:hover
-      .works-catch
+        transition: all .15s ease-in-out
+        @media(prefers-reduced-motion:reduce)
+          transform: none 
+      &:hover
+        color: #997;
         img
-          transform: scale(1.15)
-          opacity: .5
+          box-shadow: 0 4px 16px 0 rgba(0, 0, 0, .2)
+
 
 

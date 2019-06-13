@@ -90,12 +90,39 @@ if (document.getElementById('about')) {
       }
     });
   }
-  const ctx = document.getElementsByClassName("per-90");
-  chartFunc(ctx, 9, 1);
-  const ctx2 = document.getElementsByClassName("per-80");
-  chartFunc(ctx2, 8, 2);
-  const ctx3 = document.getElementsByClassName("per-70");
-  chartFunc(ctx3, 7, 3);
+  const ctx_html = document.getElementsByClassName("per-html");
+  chartFunc(ctx_html, 11, 1);
+  const ctx_css = document.getElementsByClassName("per-css");
+  chartFunc(ctx_css, 11, 1);
+  const ctx_sass = document.getElementsByClassName("per-sass");
+  chartFunc(ctx_sass, 10, 2);
+  const ctx_ps = document.getElementsByClassName("per-ps");
+  chartFunc(ctx_ps, 10, 2);
+  const ctx_dw = document.getElementsByClassName("per-dw");
+  chartFunc(ctx_dw, 10, 2);
+  const ctx_ai = document.getElementsByClassName("per-ai");
+  chartFunc(ctx_ai, 9, 3);
+  const ctx_pug = document.getElementsByClassName("per-pug");
+  chartFunc(ctx_pug, 9, 3);
+  const ctx_git = document.getElementsByClassName("per-git");
+  chartFunc(ctx_git, 8, 4);
+  const ctx_lm = document.getElementsByClassName("per-lm");
+  chartFunc(ctx_lm, 7, 5);
+  const ctx_npm = document.getElementsByClassName("per-npm");
+  chartFunc(ctx_npm, 7, 5);
+  const ctx_gulp = document.getElementsByClassName("per-gulp");
+  chartFunc(ctx_gulp, 7, 5);
+  const ctx_jq = document.getElementsByClassName("per-jq");
+  chartFunc(ctx_jq, 6, 6);
+  const ctx_xd = document.getElementsByClassName("per-xd");
+  chartFunc(ctx_xd, 6, 6);
+  const ctx_pr = document.getElementsByClassName("per-pr");
+  chartFunc(ctx_pr, 6, 6);
+  const ctx_ae = document.getElementsByClassName("per-ae");
+  chartFunc(ctx_ae, 3, 9);
+  const ctx_js = document.getElementsByClassName("per-js");
+  chartFunc(ctx_js, 3, 9);
+
 }
 
 // pagetop
