@@ -17,6 +17,10 @@
     display: none
   .main
     height: 100vh
+    .wrap
+      margin-top: -10%;
+      @include media-breakpoint-up(sm)
+        margin-top: 0
     &-ttl
       font-weight: 300
       font-size: 2.5rem
@@ -27,7 +31,9 @@
       animation-delay: 0.5s;
     &-down
       position: absolute
-      bottom: 1.25rem
+      left: 0
+      right: 0
+      bottom: 5rem
       font-size: 2.5rem
       color: $text-muted
       animation: flash 2s ease infinite;
@@ -37,6 +43,8 @@
       &-p
         font-weight: 100
         font-size: 1.5rem
+      &-down
+        bottom: 1.25rem
   .works
     &-txt
       font-size: .75rem
