@@ -1,5 +1,8 @@
 import emergence from 'emergence.js';
 
+//スクロールジャンクを防ぐ
+document.addEventListener('touchstart', function () { }, { passive: true });
+
 //toggleClass
 const toggleClass = function (node, className) {
   let classNames = className.trim().split(/\s+/),

@@ -27,4 +27,4 @@ mixin gNav
     if pages[x]['pageDir']
       li: a(href='/'+pages[x]['pageDir']+'/') #{pages[x]['pageName']}
     if pages[x]['pageUrl']
-      li: a(href=pages[x]['pageUrl'],target="_blank") #{pages[x]['pageName']}
+      li: a(href=pages[x]['pageUrl'],target="_blank",rel="noopener") #{pages[x]['pageName']}

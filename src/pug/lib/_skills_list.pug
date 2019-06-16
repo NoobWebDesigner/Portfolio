@@ -1,82 +1,82 @@
 -
   var list =[
     {
-      skillImg: 'https://placehold.jp/500x500.png',
+      skillImg: 'images/html5',
       skillClass: 'html',
       skillTxt: 'HTML5'
     },
     {
-      skillImg: 'https://placehold.jp/500x500.png',
+      skillImg: 'images/css3',
       skillClass: 'css',
       skillTxt: 'CSS3'
     },
     {
-      skillImg: 'https://placehold.jp/500x500.png',
+      skillImg: 'images/sass',
       skillClass: 'sass',
       skillTxt: 'Sass'
     },
     {
-      skillImg: 'https://placehold.jp/500x500.png',
+      skillImg: 'images/ps',
       skillClass: 'ps',
       skillTxt: 'Photoshop'
     },
     {
-      skillImg: 'https://placehold.jp/500x500.png',
+      skillImg: 'images/dw',
       skillClass: 'dw',
       skillTxt: 'Dreamweaver'
     },
     {
-      skillImg: 'https://placehold.jp/500x500.png',
+      skillImg: 'images/ai',
       skillClass: 'ai',
       skillTxt: 'Illustrator'
     },
     {
-      skillImg: 'https://placehold.jp/500x500.png',
+      skillImg: 'images/pug',
       skillClass: 'pug',
       skillTxt: 'Pug'
     },
     {
-      skillImg: 'https://placehold.jp/500x500.png',
+      skillImg: 'images/git',
       skillClass: 'git',
       skillTxt: 'Git'
     },
     {
-      skillImg: 'https://placehold.jp/500x500.png',
+      skillImg: 'images/laravel-mix',
       skillClass: 'lm',
-      skillTxt: 'Laravel-Mix'
+      skillTxt: 'Laravel Mix'
     },
     {
-      skillImg: 'https://placehold.jp/500x500.png',
+      skillImg: 'images/npm',
       skillClass: 'npm',
-      skillTxt: 'npm-script'
+      skillTxt: 'npm-scripts'
     },
     {
-      skillImg: 'https://placehold.jp/500x500.png',
+      skillImg: 'images/gulp',
       skillClass: 'gulp',
       skillTxt: 'Gulp'
     },
     {
-      skillImg: 'https://placehold.jp/500x500.png',
+      skillImg: 'images/jquery',
       skillClass: 'jq',
       skillTxt: 'jQuery'
     },
     {
-      skillImg: 'https://placehold.jp/500x500.png',
+      skillImg: 'images/xd',
       skillClass: 'xd',
       skillTxt: 'Adobe XD'
     },
     {
-      skillImg: 'https://placehold.jp/500x500.png',
+      skillImg: 'images/pr',
       skillClass: 'pr',
       skillTxt: 'Premiere Pro'
     },
     {
-      skillImg: 'https://placehold.jp/500x500.png',
+      skillImg: 'images/js',
       skillClass: 'js',
       skillTxt: 'JavaScript'
     },
     {
-      skillImg: 'https://placehold.jp/500x500.png',
+      skillImg: 'images/ae',
       skillClass: 'ae',
       skillTxt: 'AfterEffects'
     },
@@ -87,6 +87,6 @@ mixin skills_list
     .col-6.col-md-3.mb-3(data-emergence="hidden")
       .mb-2.position-relative
         h3.position-absolute
-          img.img-fluid.w-100(src=item.skillImg alt=item.skillTxt)
+          img.img-fluid.w-100(src=item.skillImg+'.png' srcset=srcset3x(item.skillImg,'.png') alt=item.skillTxt)
         canvas(class=`per-${item.skillClass}` width="400" height="400")
       p.h5.text-center #{item.skillTxt}
