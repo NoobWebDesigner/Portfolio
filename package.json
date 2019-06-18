@@ -29,6 +29,7 @@
         "imagemin": "6.0.0",
         "laravel-mix-pug-recursive": "^0.3.3-mikemartin",
         "popper.js": "1.14.7",
-        "vue": "^2.6.10"
+        "vue": "^2.6.10",
+        "webfontloader": "^1.6.28"
     }
 }
