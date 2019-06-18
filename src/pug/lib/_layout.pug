@@ -20,10 +20,10 @@ html(lang='ja')
 
     //- meta基本
     meta(charset="utf-8")
+    meta(http-equiv='x-dns-prefetch-control' content='on')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, shrink-to-fit=yes")
     meta(name='format-detection', content='email=no,telephone=no,address=no')
-    meta(http-equiv='x-dns-prefetch-control' content='on')
     block meta
     //- ページタイトル、ディスクリプションの設定
     - 
@@ -77,8 +77,10 @@ html(lang='ja')
 
     //- 共通CSS
     link(rel='stylesheet', href='/css/style.css')
-    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500&subset=japanese")
+    link(rel="preload" href="/css/style.css" as="style")
+    //- link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500&subset=japanese")
     link(rel="stylesheet" href="https://use.typekit.net/zgt5zkk.css")
+    link(rel="preload" href="https://use.typekit.net/zgt5zkk.css" as="font")
     link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.2.0/dist/css/yakuhanjp-noto.min.css")
     link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous")
 
@@ -94,10 +96,10 @@ html(lang='ja')
     link(rel="preconnect dns-prefetch" href="https://cdn.jsdelivr.net" crossorigin)
     link(rel="preconnect dns-prefetch" href="https://use.fontawesome.com" crossorigin)
 
-    style.
-      html,body{
-        font-family:canada-type-gibson, 'Avenir Next', Arial, YakuHanJP_Noto, "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif
-      }
+    //- style.
+    //-   html,body{
+    //-     font-family:canada-type-gibson, 'Avenir Next', Arial, YakuHanJP_Noto, "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif
+    //-   }
 
 
     //-head引き継ぎ

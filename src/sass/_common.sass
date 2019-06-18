@@ -44,42 +44,41 @@ header
     ul
       padding: 0
       margin: 0
-      li
-        list-style: none !important
-        a,&:visited
-          font-weight: 300
-          color: #fff
-          display: block
-          width: 100%;
-          padding: .625rem 1rem
-          transition: all .15s ease
-          &:hover,&:active
-            color: theme-color("primary")
-          &::before
-            font-family: "Font Awesome 5 Free"
-            content: "\f054"
-            font-size: .625rem
-            font-weight: 900
-            margin-right: 1rem;
+    li
+      list-style: none !important
+      a,&:visited
+        font-weight: 300
+        color: #fff
+        display: block
+        width: 100%;
+        padding: .625rem 1rem
+        transition: all .15s ease
+        &:hover,&:active
+          color: theme-color("primary")
+        &::before
+          font-family: "Font Awesome 5 Free"
+          content: "\f054"
+          font-size: .625rem
+          font-weight: 900
+          margin-right: 1rem;
     @include media-breakpoint-up(sm)
       position: static
       width: auto
       height: auto
       background: none
-      ul
-        li
-          display: inline-block
-          font-size: 1.25rem
-          margin-right: 2.5rem
-          line-height: 1
-          &:first-child
+      li
+        display: inline-block
+        font-size: 1.25rem
+        margin-right: 2.5rem
+        line-height: 1
+        &:first-child
+          display: none
+        &:last-child
+          margin-right: 0
+        a
+          padding: 0
+          &::before
             display: none
-          &:last-child
-            margin-right: 0
-          a
-            padding: 0
-            &::before
-              display: none
   #sp-menu
     font-size: 1.875rem
     width: 2.5rem;
