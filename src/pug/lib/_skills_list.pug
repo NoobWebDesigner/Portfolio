@@ -87,6 +87,6 @@ mixin skills_list
     .col-6.col-md-3.mb-3(data-emergence="hidden")
       .mb-2.position-relative
         h3.position-absolute
-          img.img-fluid.w-100(src=item.skillImg+'.png' srcset=srcset3x(item.skillImg,'.png') alt=item.skillTxt)
+          img.img-fluid.w-100.lozad(data-src=item.skillImg+'.png' data-srcset=srcset3x(item.skillImg,'.png') alt=item.skillTxt)
         canvas(class=`per-${item.skillClass}` width="400" height="400")
       p.h5.text-center #{item.skillTxt}

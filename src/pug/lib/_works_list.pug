@@ -25,7 +25,7 @@ mixin works_list
     div.col-md-4.col-sm-6.mb-sm-0.mb-3(data-emergence="hidden")
       a(href=item.worksLink)
         p.works-catch.mb-2.border
-          img.img-fluid.w-100(src=item.worksImg+'.png' srcset=srcset3x(item.worksImg,'.png') alt=item.worksTtl)
+          img.img-fluid.w-100.lozad(data-src=item.worksImg+'.png' data-srcset=srcset3x(item.worksImg,'.png') alt=item.worksTtl)
         h4.works-ttl.h6.mb-1 #{item.worksTtl}
         p.works-txt #{item.worksTxt}
 

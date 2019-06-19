@@ -9,7 +9,7 @@
 
 @keyframes flash
   50%
-    opacity: 0;
+    opacity: 0
 
   
 #index
@@ -18,17 +18,17 @@
   .main
     height: 100vh
     .wrap
-      margin-top: -10%;
+      margin-top: -10%
       @include media-breakpoint-up(sm)
         margin-top: 0
     &-ttl
       font-weight: 300
       font-size: 2.5rem
-      animation: fadeIn 1s ease backwards;
+      animation: fadeIn 1s ease backwards
     &-p
       font-weight: 100
-      animation: fadeIn 1s ease backwards;
-      animation-delay: 0.5s;
+      animation: fadeIn 1s ease backwards
+      animation-delay: 0.5s
     &-down
       position: absolute
       left: 0
@@ -36,7 +36,7 @@
       bottom: 6rem
       font-size: 2.5rem
       color: $text-muted
-      animation: flash 2s ease infinite;
+      animation: flash 2s ease infinite
     @include media-breakpoint-up(sm)
       &-ttl
         font-size: 5rem
@@ -50,7 +50,7 @@
       font-size: .75rem
       color: $text-muted
     a
-      text-decoration: none;
+      text-decoration: none
       transition: all .15s ease-in-out
       @media(prefers-reduced-motion:reduce)
         transform: none 
@@ -59,7 +59,7 @@
         @media(prefers-reduced-motion:reduce)
           transform: none 
       &:hover
-        color: #997;
+        color: #997
         img
           box-shadow: 0 4px 16px 0 rgba(0, 0, 0, .2)
 
