@@ -1,5 +1,4 @@
 import emergence from 'emergence.js';
-import WebFont from 'webfontloader';
 import lozad from 'lozad';
 
 //スクロールジャンクを防ぐ
@@ -7,26 +6,26 @@ document.addEventListener('touchstart', function () { }, { passive: true });
 
 //fonts
 
-  window.WebFontConfig = {
-    google: { families: ['Noto+Sans+JP:300,400,500'] },
-    typekit: { id: 'zgt5zkk' },
-    custom: {
-      families: ['YakuHanJP_Noto'],
-      urls: ['https://cdn.jsdelivr.net/npm/yakuhanjp@3.2.0/dist/css/yakuhanjp-noto.min.css']
-    },
-    active: function () {
-      sessionStorage.fonts = true;
-    }
-  };
+window.WebFontConfig = {
+  google: { families: ['Noto+Sans+JP:300,400,500'] },
+  typekit: { id: 'zgt5zkk' },
+  custom: {
+    families: ['YakuHanJP_Noto', 'Font Awesome\ 5 Icons:400,900', 'Font Awesome\ 5 Brands:400'],
+    urls: ['https://cdn.jsdelivr.net/npm/yakuhanjp@3.2.0/dist/css/yakuhanjp-noto.min.css', 'https://use.fontawesome.com/releases/v5.8.2/css/all.css']
+  },
+  active: function () {
+    sessionStorage.fonts = true;
+  }
+};
 
 (function () {
-    var wf = document.createElement('script');
-    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
-    wf.type = 'text/javascript';
-    wf.async = 'true';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(wf, s);
-  })();
+  var wf = document.createElement('script');
+  wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+  wf.type = 'text/javascript';
+  wf.async = 'true';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(wf, s);
+})();
 
 //lazy load
 const observer = lozad();
