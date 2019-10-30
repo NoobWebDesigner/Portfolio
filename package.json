@@ -1,8 +1,14 @@
 {
     "scripts": {
-        "dev": "NODE_ENV=development webpack --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "watch": "NODE_ENV=development webpack --config=node_modules/laravel-mix/setup/webpack.config.js --watch",
-        "prod": "NODE_ENV=production  webpack --config=node_modules/laravel-mix/setup/webpack.config.js"
+        "dev": "yarn pug:dev & yarn webpack:dev",
+        "watch": "yarn pug:watch & yarn webpack:watch",
+        "prod": "yarn pug:prod & yarn webpack:prod",
+        "webpack:dev": "NODE_ENV=development webpack --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "webpack:watch": "NODE_ENV=development webpack --config=node_modules/laravel-mix/setup/webpack.config.js --watch",
+        "webpack:prod": "NODE_ENV=production  webpack --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "pug:dev": "pug src/pug/ --hierarchy -o public -P",
+        "pug:watch": "pug src/pug/ --hierarchy -o public -P -w",
+        "pug:prod": "pug src/pug/ --hierarchy -o public"
     },
     "name": "laravel-mix-test",
     "version": "1.0.0",
@@ -22,6 +28,7 @@
         "laravel-mix-pug-recursive": "^0.3.3-mikemartin",
         "lozad": "^1.9.0",
         "popper.js": "1.14.7",
+        "pug-cli": "https://github.com/pugjs/pug-cli.git",
         "vue": "^2.6.10",
         "webfontloader": "^1.6.28"
     },

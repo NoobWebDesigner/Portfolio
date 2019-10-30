@@ -26,12 +26,12 @@ glob.sync('src/sass/**/*.sass').map(function (file) {
       .sourceMaps()
   }
 });
-glob.sync('src/**/*.pug').map(function (file) {
-  if (file.match("/_")) return;
-  mix.pug(file, 'public', {
-    excludePath: 'src/pug'
-  })
-});
+// glob.sync('src/**/*.pug').map(function (file) {
+//   if (file.match("/_")) return;
+//   mix.pug(file, 'public', {
+//     excludePath: 'src/pug'
+//   })
+// });
 
 mix.browserSync({
   files: './**/*',
