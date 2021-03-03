@@ -37,7 +37,7 @@
     "devDependencies": {
         "browser-sync": "^2.26.7",
         "browser-sync-webpack-plugin": "2.0.1",
-        "pug": "^2.0.4",
+        "pug": "^3.0.1",
         "sass": "^1.21.0",
         "sass-loader": "7.*",
         "vue-template-compiler": "^2.6.10"
