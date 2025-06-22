@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const works = [
+  { link: '/works/#fujimaki', img: '/images/top/img_fujimaki.png', title: 'ポートフォリオサイト 2019', text: 'デザイン / コーディング' },
+  { link: '/works/#akarimirai', img: '/images/top/img_akarimirai.png', title: '大阪夢まつり公式アイドル｜アカリみらいオフィシャルサイト', text: 'コーディング' },
+  { link: '/works/#zinossoft', img: '/images/top/img_zinossoft.png', title: '株式会社 Zinossoft', text: 'ディレクション / デザイン / コーディング' }
+];
+---
+<BaseLayout pageID="index">
+  <main>
+    <section>
+      <div class="main text-center d-flex justify-content-center align-items-center position-relative mb-5">
+        <div class="wrap">
+          <h2 class="mb-0 main-ttl">326.Fujimaki</h2>
+          <p class="main-p text-muted m-0">WEB DESIGNER / CODER</p>
+        </div>
+        <div class="main-down"><i class="fa fa-chevron-down"></i></div>
+      </div>
+      <section class="works mb-5">
+        <h3 class="h1 text-center mb-5" data-emergence="hidden">Works</h3>
+        <div class="container">
+          <div class="row">
+            {works.map(item => (
+              <div class="col-md-4 col-sm-6 mb-sm-0 mb-3" data-emergence="hidden">
+                <a href={item.link}>
+                  <p class="works-catch mb-2 border">
+                    <img class="img-fluid w-100 lozad" src={item.img} alt={item.title} />
+                  </p>
+                  <h4 class="works-ttl h6 mb-1">{item.title}</h4>
+                  <p class="works-txt">{item.text}</p>
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section class="about mb-5">
+        <h3 class="h1 text-center mb-5" data-emergence="hidden">About</h3>
+        <div class="container">
+          <div class="row d-flex">
+            <div class="col-md-8 order-2 order-sm-1" data-emergence="hidden">
+              <h4 class="mb-0 font-weight-normal">326.Fujimaki</h4>
+              <p class="mb-3">Webデザイナー／コーダー</p>
+              <p class="mb-3 text-justify">W3C準拠のHTML5/CSS3コーディングと、SEOを意識したアウトライン構築を得意としています。</p>
+              <p class="mb-3 text-justify">WEBデザイナーとして5年間、コーディング ・ ページデザイン ・ バナー作成 ・ HTMLメールなどを制作してきました。その中でもコーディングが好きなので、フロントエンドについて勉強中です。</p>
+              <p class="mb-3 text-justify">自分の作ったデザインを通して、人々の情報リテラシー向上に貢献できればと考えています。</p>
+              <p>
+                <a class="col-md-6 btn btn-outline-dark" href="/about/">詳しくはこちら&nbsp;&nbsp;<i class="fas fa-angle-right"></i></a>
+              </p>
+            </div>
+            <div class="col-md-4 order-1 order-sm-2" data-emergence="hidden">
+              <p><img class="img-fluid w-100 rounded-circle lozad" src="/about/images/face.jpg" srcset="/about/images/face@2x.jpg 2x" alt="326" /></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+</BaseLayout>
