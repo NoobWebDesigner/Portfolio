@@ -1,0 +1,63 @@
+---
+const { pageName = '', description = '', pageUrl = '', pageID = '' } = Astro.props;
+const siteURL = 'https://fujimaki.design/';
+const siteName = '326.Fujimaki｜Web Designer';
+const d_description = description || 'WEBデザイナーの 326.Fujimaki のポートフォリオサイト。';
+const title = pageName ? `${pageName}｜326.Fujimaki｜Web Designer` : '326.Fujimaki｜Web Designer';
+const ogpTitle = pageName || siteName;
+const ogpType = pageUrl === '' ? 'website' : 'article';
+---
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142232094-1"></script>
+    <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-142232094-1');</script>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, shrink-to-fit=yes" />
+    <meta name="format-detection" content="email=no,telephone=no,address=no" />
+    <title>{title}</title>
+    <meta name="description" content={d_description} />
+    <link rel="canonical" href={siteURL + (pageUrl ? pageUrl + '/' : '')} />
+    <meta property="og:title" content={ogpTitle} />
+    <meta property="og:type" content={ogpType} />
+    <meta property="og:image" content="https://fujimaki.design/images/ogp.png" />
+    <meta property="og:url" content={siteURL + (pageUrl ? pageUrl + '/' : '')} />
+    <meta property="og:description" content={d_description} />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:locale" content="ja" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body id={pageID}>
+    <header id="header" class="d-flex justify-content-between fixed-top w-100">
+      <h1 class="mb-0"><a href="/">326.Fujimaki</a></h1>
+      <nav id="gNav">
+        <ul>
+          <li><a href="/">Top</a></li>
+          <li><a href="/works/">Works</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="https://game-web-design.hatenadiary.com/" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://twitter.com/NoobWebDesigner" target="_blank" rel="noopener">Twitter</a></li>
+          <li><a href="mailto:326.fujimaki@gmail.com">Contact</a></li>
+        </ul>
+      </nav>
+      <div id="sp-menu" class="d-block d-sm-none"><i class="fas fa-f fa-bars"></i></div>
+    </header>
+    <div id="sticky"></div>
+    <slot />
+    <footer class="border-top p-4">
+      <div class="container d-sm-flex justify-content-between text-center">
+        <small>©️ 2019 326.Fujimaki</small>
+        <ul class="d-none d-sm-block">
+          <li><a href="/">Top</a></li>
+          <li><a href="/works/">Works</a></li>
+          <li><a href="/about/">About</a></li>
+        </ul>
+      </div>
+    </footer>
+    <div id="pagetop"><i class="far fa-caret-square-up"></i></div>
+    <script src="/js/app.js" defer></script>
+  </body>
+</html>
